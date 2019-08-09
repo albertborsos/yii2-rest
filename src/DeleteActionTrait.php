@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\ddd\rest;
+namespace albertborsos\rest;
 
 use albertborsos\ddd\models\AbstractService;
 use Yii;
@@ -9,8 +9,7 @@ use yii\web\ServerErrorHttpException;
 
 /**
  * Trait DeleteActionTrait
- * @package albertborsos\ddd\rest
- * @since 2.0.0
+ * @package albertborsos\rest
  */
 trait DeleteActionTrait
 {

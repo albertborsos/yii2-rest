@@ -1,14 +1,13 @@
 <?php
 
-namespace albertborsos\ddd\rest\cache;
+namespace albertborsos\rest\cache;
 
-use albertborsos\ddd\rest\DeleteActionTrait;
-use albertborsos\ddd\rest\FormAndServiceActionTrait;
+use albertborsos\rest\DeleteActionTrait;
+use albertborsos\rest\FormAndServiceActionTrait;
 
 /**
  * Class DeleteAction
- * @package albertborsos\ddd\rest\cache
- * @since 2.0.0
+ * @package albertborsos\rest\cache
  */
 class DeleteAction extends Action
 {

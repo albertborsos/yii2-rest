@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\ddd\rest;
+namespace albertborsos\rest;
 
 use albertborsos\ddd\interfaces\CacheRepositoryInterface;
 use albertborsos\ddd\interfaces\RepositoryInterface;
@@ -10,8 +10,7 @@ use yii\web\ForbiddenHttpException;
 
 /**
  * Class Controller
- * @package albertborsos\ddd\rest
- * @since 2.0.0
+ * @package albertborsos\rest
  */
 class Controller extends \yii\rest\Controller
 {

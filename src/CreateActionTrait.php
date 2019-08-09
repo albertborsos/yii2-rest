@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\ddd\rest;
+namespace albertborsos\rest;
 
 use albertborsos\ddd\interfaces\EntityInterface;
 use albertborsos\ddd\models\AbstractService;
@@ -11,8 +11,7 @@ use yii\web\ServerErrorHttpException;
 
 /**
  * Trait CreateActionTrait
- * @package albertborsos\ddd\rest
- * @since 2.0.0
+ * @package albertborsos\rest
  */
 trait CreateActionTrait
 {

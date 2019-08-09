@@ -1,16 +1,15 @@
 <?php
 
-namespace albertborsos\ddd\rest\active;
+namespace albertborsos\rest\active;
 
 use albertborsos\ddd\interfaces\ActiveRepositoryInterface;
 use yii\base\InvalidConfigException;
 
 /**
  * Class Controller
- * @package albertborsos\ddd\rest\active
- * @since 2.0.0
+ * @package albertborsos\rest\active
  */
-class Controller extends \albertborsos\ddd\rest\Controller
+class Controller extends \albertborsos\rest\Controller
 {
     /**
      * @return ActiveRepositoryInterface

@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\ddd\rest\cache;
+namespace albertborsos\rest\cache;
 
 use albertborsos\ddd\interfaces\CacheRepositoryInterface;
 use albertborsos\ddd\interfaces\EntityInterface;
@@ -12,9 +12,8 @@ use yii\web\NotFoundHttpException;
  * @package mito\cms\core\rest\admin
  *
  * @property \mito\cms\core\rest\Controller $controller
- * @since 2.0.0
  */
-class Action extends \albertborsos\ddd\rest\Action
+class Action extends \albertborsos\rest\Action
 {
     /**
      * Returns the data model based on the primary key given.

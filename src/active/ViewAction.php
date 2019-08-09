@@ -1,15 +1,14 @@
 <?php
 
-namespace albertborsos\ddd\rest\active;
+namespace albertborsos\rest\active;
 
 use albertborsos\ddd\interfaces\EntityInterface;
-use albertborsos\ddd\rest\ViewActionTrait;
+use albertborsos\rest\ViewActionTrait;
 use yii\web\NotFoundHttpException;
 
 /**
  * Class ViewAction
- * @package albertborsos\ddd\rest\active
- * @since 2.0.0
+ * @package albertborsos\rest\active
  */
 class ViewAction extends Action
 {

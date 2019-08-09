@@ -1,15 +1,14 @@
 <?php
 
-namespace albertborsos\ddd\rest\active;
+namespace albertborsos\rest\active;
 
-use albertborsos\ddd\rest\IndexActionTrait;
+use albertborsos\rest\IndexActionTrait;
 use Yii;
 use yii\data\ActiveDataProvider;
 
 /**
  * Class IndexAction
- * @package albertborsos\ddd\rest\active
- * @since 2.0.0
+ * @package albertborsos\rest\active
  */
 class IndexAction extends Action
 {

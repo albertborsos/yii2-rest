@@ -1,14 +1,13 @@
 <?php
 
-namespace albertborsos\ddd\rest;
+namespace albertborsos\rest;
 
 use yii\base\InvalidConfigException;
 use yii\data\ActiveDataProvider;
 
 /**
  * Trait IndexActionTrait
- * @package albertborsos\ddd\rest
- * @since 2.0.0
+ * @package albertborsos\rest
  */
 trait IndexActionTrait
 {

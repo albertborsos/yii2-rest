@@ -1,14 +1,13 @@
 <?php
 
-namespace albertborsos\ddd\rest\active;
+namespace albertborsos\rest\active;
 
-use albertborsos\ddd\rest\CreateActionTrait;
-use albertborsos\ddd\rest\FormAndServiceActionTrait;
+use albertborsos\rest\CreateActionTrait;
+use albertborsos\rest\FormAndServiceActionTrait;
 
 /**
  * Class CreateAction
- * @package albertborsos\ddd\rest\active
- * @since 2.0.0
+ * @package albertborsos\rest\active
  */
 class CreateAction extends Action
 {

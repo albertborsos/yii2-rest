@@ -27,9 +27,6 @@
         "php-coveralls/php-coveralls": "^2.1",
         "mito/yii2-coding-standards": "~2.0.0-beta16"
     },
-    "extra": {
-        "bootstrap": "albertborsos\\rest\\Bootstrap"
-    },
     "autoload": {
         "psr-4": {
             "albertborsos\\rest\\": "src/",

@@ -1,16 +1,15 @@
 <?php
 
-namespace albertborsos\ddd\rest\cache;
+namespace albertborsos\rest\cache;
 
-use albertborsos\ddd\rest\IndexActionTrait;
+use albertborsos\rest\IndexActionTrait;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\data\ActiveDataProvider;
 
 /**
  * Class IndexAction
- * @package albertborsos\ddd\rest\cache
- * @since 2.0.0
+ * @package albertborsos\rest\cache
  */
 class IndexAction extends Action
 {

@@ -1,14 +1,13 @@
 <?php
 
-namespace albertborsos\ddd\rest\cache;
+namespace albertborsos\rest\cache;
 
-use albertborsos\ddd\rest\FormAndServiceActionTrait;
-use albertborsos\ddd\rest\UpdateActionTrait;
+use albertborsos\rest\FormAndServiceActionTrait;
+use albertborsos\rest\UpdateActionTrait;
 
 /**
  * Class UpdateAction
- * @package albertborsos\ddd\rest\cache
- * @since 2.0.0
+ * @package albertborsos\rest\cache
  */
 class UpdateAction extends Action
 {

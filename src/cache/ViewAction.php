@@ -1,13 +1,12 @@
 <?php
 
-namespace albertborsos\ddd\rest\cache;
+namespace albertborsos\rest\cache;
 
-use albertborsos\ddd\rest\ViewActionTrait;
+use albertborsos\rest\ViewActionTrait;
 
 /**
  * Class ViewAction
- * @package albertborsos\ddd\rest\cache
- * @since 2.0.0
+ * @package albertborsos\rest\cache
  */
 class ViewAction extends Action
 {

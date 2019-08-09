@@ -1,11 +1,10 @@
 <?php
 
-namespace albertborsos\ddd\rest;
+namespace albertborsos\rest;
 
 /**
  * Trait ViewActionTrait
- * @package albertborsos\ddd\rest
- * @since 2.0.0
+ * @package albertborsos\rest
  */
 trait ViewActionTrait
 {

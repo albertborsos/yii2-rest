@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\ddd\rest;
+namespace albertborsos\rest;
 
 use albertborsos\ddd\interfaces\ActiveRepositoryInterface;
 use albertborsos\ddd\interfaces\EntityInterface;
@@ -9,8 +9,7 @@ use yii\web\NotFoundHttpException;
 
 /**
  * Trait FormAndServiceActionTrait
- * @package albertborsos\ddd\rest
- * @since 2.0.0
+ * @package albertborsos\rest
  */
 trait FormAndServiceActionTrait
 {

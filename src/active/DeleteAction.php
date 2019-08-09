@@ -1,14 +1,13 @@
 <?php
 
-namespace albertborsos\ddd\rest\active;
+namespace albertborsos\rest\active;
 
-use albertborsos\ddd\rest\DeleteActionTrait;
-use albertborsos\ddd\rest\FormAndServiceActionTrait;
+use albertborsos\rest\DeleteActionTrait;
+use albertborsos\rest\FormAndServiceActionTrait;
 
 /**
  * Class DeleteAction
- * @package albertborsos\ddd\rest\active
- * @since 2.0.0
+ * @package albertborsos\rest\active
  */
 class DeleteAction extends Action
 {

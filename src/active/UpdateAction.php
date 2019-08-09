@@ -1,14 +1,13 @@
 <?php
 
-namespace albertborsos\ddd\rest\active;
+namespace albertborsos\rest\active;
 
-use albertborsos\ddd\rest\FormAndServiceActionTrait;
-use albertborsos\ddd\rest\UpdateActionTrait;
+use albertborsos\rest\FormAndServiceActionTrait;
+use albertborsos\rest\UpdateActionTrait;
 
 /**
  * Class UpdateAction
- * @package albertborsos\ddd\rest\active
- * @since 2.0.0
+ * @package albertborsos\rest\active
  */
 class UpdateAction extends Action
 {
