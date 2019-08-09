@@ -1,6 +1,6 @@
 {
-    "name": "albertborsos/yii2-ddd",
-    "description": "Classes for Domain-Driven Development with Yii 2.0 Framework",
+    "name": "albertborsos/yii2-rest",
+    "description": "Yii 2.0 REST API related classes with some improvements",
     "type": "yii2-extension",
     "keywords": ["yii2","extension"],
     "license": "MIT",
@@ -12,8 +12,7 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "yiisoft/yii2": "~2.0.14",
-        "samdark/hydrator": "^1.0.2"
+        "albertborsos/yii2-ddd": "dev-repository"
     },
     "require-dev": {
         "codeception/base": "~3.0",
@@ -29,16 +28,16 @@
         "mito/yii2-coding-standards": "~2.0.0-beta16"
     },
     "extra": {
-        "bootstrap": "albertborsos\\ddd\\Bootstrap"
+        "bootstrap": "albertborsos\\rest\\Bootstrap"
     },
     "autoload": {
         "psr-4": {
-            "albertborsos\\ddd\\": "src/",
-            "albertborsos\\ddd\\tests\\": "tests/",
-            "albertborsos\\ddd\\tests\\support\\base\\": "tests/_support/base/",
-            "albertborsos\\ddd\\tests\\support\\base\\domains\\": "tests/_support/base/domains",
-            "albertborsos\\ddd\\tests\\support\\base\\modules\\": "tests/_support/base/modules",
-            "albertborsos\\ddd\\tests\\support\\base\\services\\": "tests/_support/base/services"
+            "albertborsos\\rest\\": "src/",
+            "albertborsos\\rest\\tests\\": "tests/",
+            "albertborsos\\rest\\tests\\support\\base\\": "tests/_support/base/",
+            "albertborsos\\rest\\tests\\support\\base\\domains\\": "tests/_support/base/domains",
+            "albertborsos\\rest\\tests\\support\\base\\modules\\": "tests/_support/base/modules",
+            "albertborsos\\rest\\tests\\support\\base\\services\\": "tests/_support/base/services"
         }
     },
     "repositories": [
