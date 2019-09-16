@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\rest;
+namespace albertborsos\rest\traits;
 
 use albertborsos\ddd\interfaces\EntityInterface;
 use albertborsos\ddd\models\AbstractService;
@@ -45,6 +45,7 @@ trait CreateActionTrait
                 $response->setStatusCode(201);
                 $id = is_array($service->getId()) ? implode(',', array_values($service->getId())) : $service->getId();
                 $response->getHeaders()->set('Location', Url::toRoute([$this->viewAction, 'id' => $id], true));
+
 
                 return $this->findEntity($service->getId());
             } elseif (!$form->hasErrors()) {

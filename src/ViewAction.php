@@ -1,18 +1,18 @@
 <?php
 
-namespace albertborsos\rest\active;
+namespace albertborsos\rest;
 
 use albertborsos\ddd\interfaces\EntityInterface;
-use albertborsos\rest\ViewActionTrait;
-use yii\web\NotFoundHttpException;
+use albertborsos\rest\traits\ViewActionTrait;
 
 /**
  * Class ViewAction
- * @package albertborsos\rest\active
+ * @package albertborsos\rest\cache
  */
 class ViewAction extends Action
 {
     use ViewActionTrait;
+
 
     public function findEntity($id): ?EntityInterface
     {
@@ -28,12 +28,12 @@ class ViewAction extends Action
 
         $relations = explode(',', $expand);
 
-        $model = $this->getRepository()->find()->with($relations)->where($this->getPrimaryKeyCondition($id))->one();
+        $entity = $this->getRepository()->findById($id);
 
-        if (isset($model)) {
-            return $this->getRepository()->hydrate($model);
+        if (!isset($entity)) {
+            throw new NotFoundHttpException("Object not found: $id");
         }
 
-        throw new NotFoundHttpException("Object not found: $id");
+        return $entity;
     }
 }

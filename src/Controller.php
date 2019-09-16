@@ -56,7 +56,7 @@ class Controller extends \yii\rest\Controller
      * @return RepositoryInterface|CacheRepositoryInterface
      * @throws InvalidConfigException
      */
-    public function getRepository()
+    public function getRepository(): RepositoryInterface
     {
         return \Yii::createObject($this->repositoryInterface);
     }

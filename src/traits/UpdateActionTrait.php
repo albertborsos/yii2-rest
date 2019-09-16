@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\rest;
+namespace albertborsos\rest\traits;
 
 use albertborsos\ddd\interfaces\EntityInterface;
 use albertborsos\ddd\interfaces\FormObject;

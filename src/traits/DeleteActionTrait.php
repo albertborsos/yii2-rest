@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\rest;
+namespace albertborsos\rest\traits;
 
 use albertborsos\ddd\models\AbstractService;
 use Yii;
@@ -30,14 +30,19 @@ trait DeleteActionTrait
             call_user_func($this->checkAccess, $this->id, $entity);
         }
 
-        $form = \Yii::createObject($this->formClass, [$entity]);
-        if ($form->validate()) {
-            /** @var AbstractService $service */
-            $service = \Yii::createObject($this->serviceClass, [$form, $entity, $this->getRepository()]);
-            if ($service->execute()) {
-                Yii::$app->getResponse()->setStatusCode(204);
-                Yii::$app->end();
+        $form = null;
+        if (isset($this->formClass) && !empty($this->formClass)) {
+            $form = \Yii::createObject($this->formClass, [$entity]);
+            if ($form->validate() === false) {
+                return $form;
             }
+        }
+
+        /** @var AbstractService $service */
+        $service = \Yii::createObject($this->serviceClass, $form ? [$form, $entity, $this->getRepository()] : [$entity, $this->getRepository()]);
+        if ($service->execute()) {
+            Yii::$app->getResponse()->setStatusCode(204);
+            Yii::$app->end();
         }
 
         if (!$form->hasErrors()) {

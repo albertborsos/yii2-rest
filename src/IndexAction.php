@@ -1,14 +1,15 @@
 <?php
 
-namespace albertborsos\rest\active;
+namespace albertborsos\rest;
 
-use albertborsos\rest\IndexActionTrait;
+use albertborsos\rest\traits\IndexActionTrait;
 use Yii;
+use yii\base\InvalidConfigException;
 use yii\data\ActiveDataProvider;
 
 /**
  * Class IndexAction
- * @package albertborsos\rest\active
+ * @package albertborsos\rest\cache
  */
 class IndexAction extends Action
 {
@@ -30,6 +31,6 @@ class IndexAction extends Action
             return call_user_func($this->prepareDataProvider, $this, $requestParams);
         }
 
-        return $this->getRepository()->search($requestParams, '');
+        throw new InvalidConfigException('Search is not implemented in ' . get_class($this->getRepository()));
     }
 }

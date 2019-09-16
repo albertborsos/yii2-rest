@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\rest;
+namespace albertborsos\rest\traits;
 
 /**
  * Trait ViewActionTrait

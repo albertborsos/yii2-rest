@@ -1,6 +1,6 @@
 <?php
 
-namespace albertborsos\rest;
+namespace albertborsos\rest\traits;
 
 use yii\base\InvalidConfigException;
 use yii\data\ActiveDataProvider;

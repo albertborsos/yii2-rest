@@ -65,22 +65,55 @@ abstract class Action extends \yii\base\Action
         }
     }
 
+
     /**
-     * Returns the data entity based on the primary key given.
-     * If the data entity is not found, a 404 HTTP exception will be raised.
-     * @param string $id the ID of the entity to be loaded. If the entity has a composite primary key,
+     * Returns the data model based on the primary key given.
+     * If the data model is not found, a 404 HTTP exception will be raised.
+     * @param string $id the ID of the model to be loaded. If the model has a composite primary key,
      * the ID must be a string of the primary key values separated by commas.
      * The order of the primary key values should follow that returned by the `primaryKey()` method
-     * of the entity.
-     * @return EntityInterface the entity found
-     * @throws NotFoundHttpException if the entity cannot be found
+     * of the model.
+     * @return EntityInterface the model found
+     * @throws NotFoundHttpException if the model cannot be found
      * @throws InvalidConfigException
      */
-    abstract public function findEntity($id): ?EntityInterface;
+    public function findEntity($id): ?EntityInterface
+    {
+        if ($this->findEntity !== null) {
+            return call_user_func($this->findEntity, $id, $this);
+        }
+
+        $entity = $this->getRepository()->findById($this->getPrimaryKeyCondition($id));
+
+        if (isset($entity)) {
+            return $entity;
+        }
+
+        throw new NotFoundHttpException("Object not found: $id");
+    }
 
     /**
      * @return RepositoryInterface
      * @throws InvalidConfigException
      */
-    abstract public function getRepository();
+    public function getRepository(): RepositoryInterface
+    {
+        return $this->controller->getRepository();
+    }
+
+    protected function getPrimaryKeyCondition($id)
+    {
+        $keys = $this->getRepository()->newEntity()->getPrimaryKey();
+        $keys = is_array($keys) ? $keys : [$keys];
+        if (count($keys) > 1) {
+            $values = explode(',', $id);
+            if (count($keys) === count($values)) {
+                return array_combine($keys, $values);
+            }
+        } elseif ($id !== null) {
+            return $id;
+        }
+
+        return false;
+    }
 }
