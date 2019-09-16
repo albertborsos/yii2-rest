@@ -31,10 +31,7 @@
         "psr-4": {
             "albertborsos\\rest\\": "src/",
             "albertborsos\\rest\\tests\\": "tests/",
-            "albertborsos\\rest\\tests\\support\\base\\": "tests/_support/base/",
-            "albertborsos\\rest\\tests\\support\\base\\domains\\": "tests/_support/base/domains",
-            "albertborsos\\rest\\tests\\support\\base\\modules\\": "tests/_support/base/modules",
-            "albertborsos\\rest\\tests\\support\\base\\services\\": "tests/_support/base/services"
+            "albertborsos\\rest\\tests\\support\\base\\": "tests/_support/base/"
         }
     },
     "repositories": [
