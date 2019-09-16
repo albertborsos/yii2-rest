@@ -15,7 +15,7 @@
         "albertborsos/yii2-ddd": "dev-repository"
     },
     "require-dev": {
-        "codeception/base": "~3.0",
+        "codeception/codeception": "~3.0",
         "codeception/verify": "~1.0",
         "codeception/specify": "~1.0",
         "codeception/mockery-module": "^0.3.0",
