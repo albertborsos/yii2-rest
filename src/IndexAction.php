@@ -31,6 +31,6 @@ class IndexAction extends Action
             return call_user_func($this->prepareDataProvider, $this, $requestParams);
         }
 
-        throw new InvalidConfigException('Search is not implemented in ' . get_class($this->getRepository()));
+        return call_user_func_array([$this->getRepository(), 'search'], [$requestParams, '']);
     }
 }
